@@ -1,0 +1,301 @@
+ body {
+     padding: 0%;
+     margin: 0%;
+}
+
+.iutepal  {
+     height: 100px;
+     width: 100px;
+}
+.iutepal:hover  {
+     height: 150px;
+     width:  150px;
+     transition: 1s;
+     cursor: pointer;
+     z-index: 20;
+     position: relative;
+}
+a    {
+     text-decoration: none;
+}
+li   {
+     list-style: none;
+}
+.menu {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     background-color: rgb(5, 86, 97);
+     padding: 2% 5% 2% 5%;
+}
+.menu ul{
+     display: flex;
+     margin: 0%;
+     padding: 0%;
+}
+.menu ul li a  {
+     position: relative;
+     display: block;
+     text-align: center;
+     margin: 0 10px;
+     font-family: Montserrat, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+     color: rgb(255, 255, 255);
+     font-size: 30px;
+     text-transform: uppercase;
+}
+.menu ul li a::before {
+     content: "";
+     position: absolute;
+     bottom: 0%;
+     left: 0%;
+     width: 0%;
+     height: .6rem;
+     background: rgb(129, 166, 168);
+     transition: .5s;
+}
+.menu ul li a::after {
+     content: "";
+     position: absolute;
+     bottom: 0%;
+     right: 0%;
+     width: 0%;
+     height: .6rem;
+     background: rgb(26, 110, 131);
+     transition: .5s;
+}
+.menu ul li:hover  a {
+     color: rgb(0, 0, 0);
+     transition: .5s;
+}
+.menu ul li:hover  a::before {
+     width: 50%;
+     transform: translate(100%);
+}
+.menu ul li:hover  a ::after {
+     width: 50%;
+     transform: translate(-100%);
+}
+.full-background {
+     /* Center the content */
+     align-items: center;
+     display: flex;
+     flex-direction: column-reverse;
+     justify-content: flex-end;
+     color: white;
+     font-family: Montserrat, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+     font-size: 70px;
+     letter-spacing: 5px;
+ 
+     /* Take full size */
+     height: 100vh;
+     width: 100%;
+ 
+     /* Background */
+     background-image: url('/IMG_0009.jpeg'); 
+     background-size: 100% 100%;
+ }
+ .full-background h1{
+     top: 0%;
+     text-shadow: 2px 2px 4px #000000;
+ }
+ .full-background div {
+     width: 0%;
+     height: 100vh;
+     background: rgba(69, 134, 209, 0.116);
+     position: absolute;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     overflow: hidden;
+     transition: all 400ms ease-in-out;
+ }
+ .full-background:hover div   {
+     width: 100%;
+ }
+ .but     {
+     font-size: 40px;
+     font-family: Montserrat, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+     padding-left: 10%;
+     padding-right: 10%;
+     padding-top: 2%;
+     padding-bottom: 2%;
+     border-radius: 10px;
+     border: none;
+     cursor: pointer;
+ }
+ .but:hover    {
+     background-color: rgb(17, 51, 102);
+     transition: .5s ease-out;
+     color: white;
+ }
+ /* The Modal (background) */
+.modal {
+     display: none; /* Oculta por defecto */
+     position: fixed; /* Se queda en un sitio */
+     z-index: 1; /* lo sobrepone */
+     left: 0;
+     top: 0;
+     width: 100%; 
+     height: 100%; 
+     overflow: auto; /* Esta permitido el scroll si es necesario */
+     background-color: rgb(0,0,0); 
+     background-color: rgba(0,0,0,0.4); 
+   }
+   .modal h2     {
+     text-align: center;
+     font-family: Montserrat, 'Arial Narrow Bold', sans-serif;
+   }
+   .close {
+     color: #aaa;
+     float: right;
+     font-size: 28px;
+     font-weight: bold;
+   }
+   
+   .close:hover,
+   .close:focus {
+     color: black;
+     text-decoration: none;
+     cursor: pointer;
+   }
+   form{
+     font-family: Montserrat, 'Arial Narrow Bold', sans-serif;;
+   }
+   .login-box {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     width: 400px;
+     padding: 40px;
+     transform: translate(-50%, -50%);
+     background: rgba(0,0,0,.5);
+     box-sizing: border-box;
+     box-shadow: 0 15px 25px rgba(0,0,0,.6);
+     border-radius: 10px;
+   }
+   
+   .login-box h2 {
+     margin: 0 0 30px;
+     padding: 0;
+     color: #fff;
+     text-align: center;
+   }
+   
+   .login-box .user-box {
+     position: relative;
+   }
+   
+   .login-box .user-box input {
+     width: 100%;
+     padding: 10px 0;
+     font-size: 16px;
+     color: #fff;
+     margin-bottom: 30px;
+     border: none;
+     border-bottom: 1px solid #fff;
+     outline: none;
+     background: transparent;
+   }
+   .login-box .user-box label {
+     position: absolute;
+     top:0;
+     left: 0;
+     padding: 10px 0;
+     font-size: 16px;
+     color: #fff;
+     pointer-events: none;
+     transition: .5s;
+   }
+   
+   .login-box .user-box input:focus ~ label,
+   .login-box .user-box input:valid ~ label {
+     top: -20px;
+     left: 0;
+     color: #03e9f4;
+     font-size: 12px;
+   }
+   
+   .login-box form a {
+     position: relative;
+     display: inline-block;
+     padding: 10px 20px;
+     color: #253070;
+     font-size: 16px;
+     text-decoration: none;
+     text-transform: uppercase;
+     overflow: hidden;
+     transition: .5s;
+     margin-top: 40px;
+     letter-spacing: 4px
+   }
+   
+   .login-box a:hover {
+     background: #486ea0;
+     color: #fff;
+     border-radius: 5px;
+     box-shadow: 0 0 5px #486ea0,
+                 0 0 25px #486ea0,
+                 0 0 50px #486ea0,
+                 0 0 100px #486ea0;
+   }
+   
+   .login-box a span {
+     position: absolute;
+     display: block;
+   }
+   
+   .login-box a span:nth-child(1) {
+     top: 0;
+     left: -100%;
+     width: 100%;
+     height: 2px;
+     background: linear-gradient(90deg, transparent, #115d61);
+     animation: btn-anim1 1s linear infinite;
+   }
+   
+   @keyframes btn-anim1 {
+     0% {
+       left: -100%;
+     }
+     50%,100% {
+       left: 100%;
+     }
+   }
+   
+   .login-box a span:nth-child(2) {
+     top: -100%;
+     right: 0;
+     width: 2px;
+     height: 100%;
+     background: linear-gradient(180deg, transparent, #115d61);
+     animation: btn-anim2 1s linear infinite;
+     animation-delay: .25s
+   }
+   
+   @keyframes btn-anim2 {
+     0% {
+       top: -100%;
+     }
+     50%,100% {
+       top: 100%;
+     }
+   }
+   
+   .login-box a span:nth-child(3) {
+     bottom: 0;
+     right: -100%;
+     width: 100%;
+     height: 2px;
+     background: linear-gradient(270deg, transparent, #115d61);
+     animation: btn-anim3 1s linear infinite;
+     animation-delay: .5s
+   }
+   .carrers    {
+     margin-top: 45px;
+     padding-left: 30px;
+     padding-right: 30px;
+     padding-bottom: 10px;
+     padding-top: 10px;
+     font-family: Arial, Helvetica, sans-serif;
+     font-weight: 700;
+   }

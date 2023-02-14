@@ -1,0 +1,15 @@
+.perro  {
+    color: darkgreen;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+a   {
+    text-decoration: none;
+}
+body    {
+    margin: 50px;
+}
+h2 {
+    background-color: yellow;
+    text-align: center;
+}
